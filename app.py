@@ -46,19 +46,12 @@ def stream_scan(args, temp_file_path=None):
     yield f"data: {{\"type\": \"cmd\", \"text\": \"Command: {' '.join(args)}\"}}\n\n"
 
     try:
-        import re
-        ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
-        
         for line in runner.run_scan(args):
-            clean_line = ansi_escape.sub('', line).strip('\r\n')
+            clean_line = line.strip('\r\n')
             if clean_line:
-                # Need to properly escape newlines/quotes for JSON within SSE
                 import json
-                payload = json.dumps({"type": "output", "text": line}) # send raw line to keep formatting logic maybe on frontend? Actually send clean
-                payload_clean = json.dumps({"type": "output", "text": clean_line})
-                # Using the raw line lets us keep the spacing but strips colors, wait, if we want colors we need front-end ANSI parsing. 
-                # Let's send the clean line for now, or just the raw line and let front end figure it out. Data must contain no native newlines.
-                yield f"data: {payload_clean}\n\n"
+                payload = json.dumps({"type": "output", "text": clean_line})
+                yield f"data: {payload}\n\n"
     finally:
         if temp_file_path and os.path.exists(temp_file_path):
             os.remove(temp_file_path)

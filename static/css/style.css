@@ -67,8 +67,13 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translateY(0) scale(1); }
-    100% { transform: translateY(-50px) scale(1.1); }
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        transform: translateY(-50px) scale(1.1);
+    }
 }
 
 /* Main Layout */
@@ -84,8 +89,15 @@ body {
 }
 
 @keyframes dropIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Glassmorphism Styles */
@@ -162,15 +174,35 @@ header p {
     transform: translateX(-10px);
 }
 
-.form-group:nth-child(1) { animation-delay: 0.1s; }
-.form-group:nth-child(2) { animation-delay: 0.15s; }
-.form-group:nth-child(3) { animation-delay: 0.2s; }
-.form-group:nth-child(4) { animation-delay: 0.25s; }
-.form-group:nth-child(5) { animation-delay: 0.3s; }
-.form-group:nth-child(6) { animation-delay: 0.35s; }
+.form-group:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.form-group:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.form-group:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.form-group:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+.form-group:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+.form-group:nth-child(6) {
+    animation-delay: 0.35s;
+}
 
 @keyframes slideIn {
-    to { opacity: 1; transform: translateX(0); }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 label {
@@ -182,7 +214,40 @@ label {
     letter-spacing: 0.5px;
 }
 
-input, select, textarea {
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.label-row label {
+    margin-bottom: 0;
+}
+
+.file-upload-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: var(--accent);
+    cursor: pointer;
+    text-transform: none;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(88, 166, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.file-upload-btn:hover {
+    background: rgba(88, 166, 255, 0.2);
+    color: var(--text-primary);
+}
+
+input,
+select,
+textarea {
     background: rgba(13, 17, 23, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: var(--text-primary);
@@ -199,7 +264,9 @@ textarea {
     min-height: 80px;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     border-color: var(--accent);
     box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2);
     background: rgba(13, 17, 23, 0.8);
@@ -263,7 +330,9 @@ button {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .scanning .btn-text {
@@ -287,7 +356,8 @@ button {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-width: 0; /* Prevent flex box blowing out */
+    min-width: 0;
+    /* Prevent flex box blowing out */
 }
 
 /* Command Preview */
@@ -330,7 +400,31 @@ button {
     border-bottom: 1px solid var(--glass-border);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
     gap: 1rem;
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .mac-btns {
@@ -344,9 +438,17 @@ button {
     border-radius: 50%;
 }
 
-.mac-btn.close { background: #ff5f56; }
-.mac-btn.minimize { background: #ffbd2e; }
-.mac-btn.maximize { background: #27c93f; }
+.mac-btn.close {
+    background: #ff5f56;
+}
+
+.mac-btn.minimize {
+    background: #ffbd2e;
+}
+
+.mac-btn.maximize {
+    background: #27c93f;
+}
 
 .term-title {
     color: var(--text-secondary);
@@ -400,18 +502,18 @@ button {
     .main-content {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         max-height: 30vh;
         padding-right: 0;
     }
-    
+
     .app-container {
         height: 95vh;
         padding: 1rem;
     }
-    
+
     header h1 {
         font-size: 2rem;
     }

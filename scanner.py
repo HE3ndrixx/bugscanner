@@ -28,6 +28,9 @@ os.get_terminal_size = _safe_get_terminal_size
 class BugScanner(multithreading.MultiThreadRequest):
     threads: int
 
+    def log_replace(self, *args, **kwargs):
+        pass
+
     def request_connection_error(self, *args, **kwargs):
         return 1
 
