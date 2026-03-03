@@ -1,7 +1,7 @@
 <h1 align="center">ꪶ🐼🕷TOpPLUG🕷🐼-Hunterꫂ<br></h1>
 <p align="center">
-<img src="https://ibb.co/ynPWhfGM.jpeg" />
-<img src="https://ibb.co/Dg8zBCmT.jpeg" />
+<img src="https://ibb.co/ynPWhfGM" />
+<img src="https://ibb.co/Dg8zBCmT" />
 </p>
 
 # BugScanner Web
