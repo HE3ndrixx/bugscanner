@@ -7,7 +7,7 @@ TOpPLUG HUNTER🕷🐼
 
 <h1 align="center">ꪶ🐼🕷TOpPLUG🕷🐼-Hunterꫂ<br></h1>
 <p align="center">
-<img src="https://ibb.co/ynPWhfGM, https://ibb.co/Dg8zBCmT" />
+<img src="https://ibb.co/ynPWhfGM.jpeg, https://ibb.co/Dg8zBCmT.jpeg" />
 </p>
 
 # BugScanner Web
